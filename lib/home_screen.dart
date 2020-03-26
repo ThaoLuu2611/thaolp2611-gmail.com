@@ -36,7 +36,7 @@ class FaceSmilePainter extends CustomPainter{
   @override
   void paint(Canvas canvas, Size size) {
     final paint = Paint()
-    ..style = PaintingStyle.stroke
+    ..style = PaintingStyle.fill
     ..strokeWidth = 4.0
     ..color = Colors.indigo;
 /*      canvas.drawRect(
