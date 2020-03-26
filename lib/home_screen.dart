@@ -30,13 +30,15 @@ class _HomeScreenState extends State<HomeScreen> {
     );
   }
 
+
 }
+
 
 class FaceSmilePainter extends CustomPainter{
   @override
   void paint(Canvas canvas, Size size) {
     final paint = Paint()
-    ..style = PaintingStyle.fill
+    ..style = PaintingStyle.stroke
     ..strokeWidth = 4.0
     ..color = Colors.indigo;
 /*      canvas.drawRect(
@@ -46,8 +48,23 @@ class FaceSmilePainter extends CustomPainter{
          RRect.fromRectAndRadius(Rect.fromLTRB(20, 20, 100, 100), Radius.circular(20)), paint);
 
 
-     canvas.drawOval(Rect.fromLTRB(120, 20, 240, 140), paint);
+     canvas.drawOval(Rect.fromLTWH(size.width -120, 20, 100, 100), paint);
+      print('thaomo size width = ${size.width}');
+    print('thaomo size height = ${size.height}');
+     final path = Path();
+     path.moveTo(size.width*0.8, size.height*0.8);
+     path.arcToPoint(
+       Offset(size.width *0.2, size.height * 0.6),
+       radius: Radius.circular(150)
+     );
 
+/*    path.arcToPoint(
+        Offset(size.width * 0.8, size.height *0.6),
+        radius: Radius.circular(200),
+        clockwise: false
+    );*/
+
+     canvas.drawPath(path, paint);
   }
 
   @override
