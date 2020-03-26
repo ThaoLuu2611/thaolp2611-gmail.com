@@ -45,6 +45,9 @@ class FaceSmilePainter extends CustomPainter{
      canvas.drawRRect(
          RRect.fromRectAndRadius(Rect.fromLTRB(20, 20, 100, 100), Radius.circular(20)), paint);
 
+
+     canvas.drawOval(Rect.fromLTRB(120, 20, 240, 140), paint);
+
   }
 
   @override
