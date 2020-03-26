@@ -39,8 +39,11 @@ class FaceSmilePainter extends CustomPainter{
     ..style = PaintingStyle.stroke
     ..strokeWidth = 4.0
     ..color = Colors.indigo;
-      canvas.drawRect(
-          Rect.fromLTRB(20,20,100,100), paint);
+/*      canvas.drawRect(
+          Rect.fromLTRB(20,20,100,100), paint);*/
+
+     canvas.drawRRect(
+         RRect.fromRectAndRadius(Rect.fromLTRB(20, 20, 100, 100), Radius.circular(20)), paint);
 
   }
 
